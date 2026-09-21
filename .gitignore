@@ -1,0 +1,14 @@
+# 版本控制忽略：个人运行产物与凭据，不进仓库
+__pycache__/
+*.pyc
+*.pyo
+
+# 本地生成的报告与个人提交（含真实持仓），绝不入库
+out/
+submissions/
+notes/
+
+# 环境
+.venv/
+venv/
+.env
