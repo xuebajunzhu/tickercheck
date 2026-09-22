@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>付费深度报告 · TickerCheck</title>
+<style>
+:root{--bg:#F0F7F7;--card:#FFFFFF;--ink:#0F172A;--muted:#64748B;--line:#E2E8F0;
+--accent:#0EA5E9;--green:#22C55E;--amber:#F59E0B;--red:#EF4444}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+line-height:1.6;padding:0 16px}
+.wrap{max-width:880px;margin:0 auto;padding:48px 0 64px}
+h1{font-size:30px;margin:0 0 8px;letter-spacing:-.5px}
+.tag{display:inline-block;background:#E0F2FE;color:#0369A1;border-radius:999px;
+padding:4px 12px;font-size:13px;font-weight:600;margin-bottom:20px}
+.lead{font-size:17px;color:var(--muted);margin:0 0 28px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+padding:22px;box-shadow:0 1px 3px rgba(15,23,42,.06);margin-bottom:18px}
+h2{font-size:18px;margin:0 0 14px;padding-left:10px;border-left:3px solid var(--accent)}
+.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.tier{border:1px solid var(--line);border-radius:12px;padding:18px;background:#F8FAFB;display:flex;flex-direction:column}
+.tier.feature{border:2px solid var(--accent);background:#F0F9FF}
+.tier .name{font-weight:700;font-size:15px}
+.tier .price{font-size:26px;font-weight:800;color:var(--ink);margin:6px 0 2px}
+.tier .price small{font-size:13px;font-weight:600;color:var(--muted)}
+.tier ul{margin:10px 0 0;padding-left:18px;font-size:14px;color:var(--muted)}
+.tier li{margin-bottom:6px}
+.tier .pill{display:inline-block;font-size:12px;font-weight:600;border-radius:999px;padding:2px 10px;margin-bottom:8px}
+.pill.free{background:#DCFCE7;color:#15803D}
+.pill.paid{background:#FEF3C7;color:#B45309}
+.flow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.flow .col{background:#F8FAFB;border:1px solid var(--line);border-radius:10px;padding:14px}
+.flow .col h3{font-size:14px;margin:0 0 8px;color:var(--accent)}
+.flow ol{padding-left:18px;margin:0;font-size:14px}
+.flow li{margin-bottom:8px}
+.note{font-size:12px;color:var(--muted);margin-top:10px}
+.warn{background:#FFF7ED;border:1px solid #FED7AA;border-radius:10px;padding:14px;font-size:14px}
+.include{columns:2;font-size:14px}
+.include li{margin-bottom:6px}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
+font-weight:600;padding:11px 20px;border-radius:10px;margin:6px 8px 0 0;font-size:14px}
+.btn.ghost{background:#fff;color:var(--accent);border:1px solid var(--accent)}
+footer{color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:18px;margin-top:24px}
+@media(max-width:560px){.flow{grid-template-columns:1fr}.include{columns:1}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>付费深度报告</h1>
+  <div class="tag">TickerCheck · 免费体检 → 付费读片</div>
+  <p class="lead">免费工具给你一张<b>五维体检分数卡</b>；付费报告帮你把分数<b>读懂、用上、落到下一步</b>。机器能自动打的分，全部免费；需要专业判断来"翻译"的部分，才是付费层。</p>
+
+  <div class="card">
+    <h2>三层产品与定价（草图 · 价格待上线）</h2>
+    <div class="tiers">
+      <div class="tier">
+        <span class="pill free">免费</span>
+        <div class="name">本地体检卡</div>
+        <div class="price">¥0</div>
+        <ul>
+          <li>五维规则化打分</li>
+          <li>单文件 HTML 报告</li>
+          <li>数据全程不出本机</li>
+          <li>零边际成本、自助</li>
+        </ul>
+      </div>
+      <div class="tier feature">
+        <span class="pill paid">付费</span>
+        <div class="name">深度解读报告</div>
+        <div class="price">¥49 <small>/ 次</small></div>
+        <ul>
+          <li>AI + 专业判断二次解读</li>
+          <li>分数白话化 + 风险定位</li>
+          <li>个性化"下一步核查清单"</li>
+          <li>单文件 HTML 交付</li>
+        </ul>
+      </div>
+      <div class="tier">
+        <span class="pill paid">付费</span>
+        <div class="name">报告 + 答疑</div>
+        <div class="price">¥99 <small>/ 次</small></div>
+        <ul>
+          <li>含深度解读报告全部</li>
+          <li>加 1 次 15 分钟异步文字答疑</li>
+          <li>针对你的清单追问 / 澄清</li>
+          <li>交付后 7 天内有效</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">价格为草拟，当前站点<b>暂不收钱</b>：先用手动流程跑前 5 单，验证"有人愿意付"之后才接支付。</p>
+  </div>
+
+  <div class="card">
+    <h2>付费报告包含什么 / 不含什么</h2>
+    <ul class="include">
+      <li>五维分数的白话解读（不是复述数字）</li>
+      <li>风险点定位 + 严重度分级</li>
+      <li>与你自查基准的偏差提示</li>
+      <li>个性化"下一步核查清单"</li>
+      <li>明确标注的边界与适用场景</li>
+      <li>你本机生成报告的二次加工</li>
+    </ul>
+    <p class="note">不含：买卖建议、收益或回撤承诺、个股评级、任何"该买/该卖"结论。付费报告与免费工具一样，仅用于信息整理与自我核查。</p>
+  </div>
+
+  <div class="card">
+    <h2>交付流程</h2>
+    <div class="flow">
+      <div class="col">
+        <h3>① 你（用户侧）</h3>
+        <ol>
+          <li>本机跑免费工具，得到 report.html</li>
+          <li>在申请页提交 report.html + 一句自查目标</li>
+          <li>收到单文件 HTML 深度报告</li>
+          <li>（¥99 档）7 天内文字追问一次</li>
+        </ol>
+      </div>
+      <div class="col">
+        <h3>② 我（创始人侧 · AI 辅助）</h3>
+        <ol>
+          <li>收到报告，喂入结构化解读模板 + LLM</li>
+          <li>AI 产出解读骨架</li>
+          <li>我逐条核对、加专业判断、删错漏</li>
+          <li>导出单文件 HTML，24–48h 内交付</li>
+        </ol>
+      </div>
+    </div>
+    <p class="note">AI 负责"把规则分翻成可读文本"的脏活；我负责"判断准不准、边界清不清"。一个人、每周 2 小时也能交付，因为重活交给模板和模型。</p>
+  </div>
+
+  <div class="warn">
+    ⚠️ <b>数据边界（信任红线）</b>：免费工具的数据<b>永远不出本机</b>。付费报告需要你<b>主动提交</b>本机生成的 report.html，意味着这份数据会离开你的电脑进入交付流程——这是你知情同意下的选择。交付完成后报告文件即删、不留存、不用于任何其他用途。付费报告同样<b>不含任何买卖建议</b>。
+  </div>
+
+  <div class="card">
+    <h2>现在怎么开始</h2>
+    <p style="margin:0 0 12px;color:var(--muted)">内测期不接支付。想要一份深度解读，先免费跑工具，再把 report.html 发到申请邮箱，我手动跑前 5 单（暂不收费，换一句真实反馈）。验证愿意付费后，再上自动支付与申请页。</p>
+    <a class="btn" href="index.html">返回首页跑免费工具</a>
+    <a class="btn ghost" href="https://github.com/xuebajunzhu/tickercheck/blob/main/docs/付费交付说明.md">看完整交付说明</a>
+  </div>
+
+  <footer>
+    TickerCheck · MIT License · 免费工具数据全程不出本机<br>
+    配套方法论：<a href="https://github.com/xuebajunzhu/tickercheck/blob/main/docs/方法论-五指标自查持仓.md">用 5 个可核实指标给自己做持仓体检</a>
+  </footer>
+</div>
+</body>
+</html>
